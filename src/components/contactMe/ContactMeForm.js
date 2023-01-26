@@ -1,8 +1,8 @@
-import { Button, Grid, styled, TextField, Box, Typography } from "@mui/material";
+import { Button, Grid, styled, TextField, Typography, Paper } from "@mui/material";
 
 // -------------------------------------------------------------------------
 
-const BoxStyled = styled(Box)(({ theme }) => ({
+const PaperStyled = styled(Paper)(({ theme }) => ({
   background: theme.palette.common.white,
   borderRadius: 2,
   padding: theme.spacing(4)
@@ -10,13 +10,23 @@ const BoxStyled = styled(Box)(({ theme }) => ({
 
 const Title = styled(Typography)(() => ({
   fontWeight: 600
-}))
+}));
+
+const ButtonSend = styled(Button)(({ theme }) => ({
+  paddingLeft: theme.spacing(4),
+  paddingRight: theme.spacing(4), 
+  fontWeight: 600,
+  background: theme.palette.grey[700],
+  '&:hover': {
+    background: theme.palette.grey[800]
+  }
+}));
 
 // -------------------------------------------------------------------------
 
 export default function ContactMeForm() {
   return(
-    <BoxStyled>
+    <PaperStyled elevation={10}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Title>Informacion personal</Title>
@@ -52,15 +62,11 @@ export default function ContactMeForm() {
           />
         </Grid>
         <Grid item sx={{ width: '100%', textAlign: 'center' }}>
-          <Button 
-            variant="contained"
-            sx={{ px: 4, fontWeight: 600 }}
-            color="info"
-          >
+          <ButtonSend variant="contained">
             Enviar
-          </Button>
+          </ButtonSend>
         </Grid>
       </Grid>
-    </BoxStyled>
+    </PaperStyled>
   );
 };

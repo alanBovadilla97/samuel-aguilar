@@ -5,12 +5,12 @@ import ContactMeForm from "./ContactMeForm";
 // -------------------------------------------------------------------------
 
 const BoxStyled = styled(Box)(({ theme }) => ({
-  background: theme.palette.info.dark,
+  background: theme.palette.common.white,
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
-  color: theme.palette.info.contrastText,
-  fontWeight: 600
+  fontWeight: 600,
+  textAlign: 'center'
 }))
 
 // -------------------------------------------------------------------------
@@ -19,7 +19,7 @@ export default function ContactMe() {
   return(
     <BoxStyled p={4}>
       <Container maxWidth="xl">
-        <Title variant="h4">Contactame</Title>
+        <Title variant="h3">Contactame</Title>
         <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
           <Grid item xs={12} md={5} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContactMeCard />
