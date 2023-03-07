@@ -56,7 +56,7 @@ export default function Services () {
   ];
 
   return(
-    <BoxStyled p={4}>
+    <BoxStyled px={4} py={6}>
       <ContainerStyled maxWidth="xl">
         <Title variant="h3">Servicios</Title>
         <Subtitle>

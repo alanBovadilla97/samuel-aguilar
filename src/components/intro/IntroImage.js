@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import { Box, Button, styled, Typography } from "@mui/material";
 
 // -------------------------------------------------------------------------
@@ -37,6 +39,16 @@ const ButtonServices = styled(Button)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function IntroImage() {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+}, []);
+
   return(
     <Container>
       <Title>
@@ -54,6 +66,7 @@ export default function IntroImage() {
         component="img" 
         src={process.env.PUBLIC_URL + '/static/landmark.jpg'} 
         alt="logo"
+        // sx={{ transform: `translate(0px, ${offset}px)`}}
       />
     </Container>
   );

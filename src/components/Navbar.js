@@ -1,4 +1,6 @@
 import { AppBar, Box, Button, Container, styled, Toolbar, Typography } from "@mui/material";
+import { useState } from "react";
+import ServicesMenu from "./navbar/ServicesMenu";
 
 // -------------------------------------------------------------------------
 
@@ -24,28 +26,48 @@ const ButtonStyled = styled(Button)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function Navbar() {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return(
-    <AppBarStyled position="sticky">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          <Title
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-          >
-            SAMUEL AGUILAR
-          </Title>
-          <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
-            <ButtonStyled>
-              Servicios
-            </ButtonStyled>
-            <ButtonStyled>
-              Contactame
-            </ButtonStyled>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBarStyled>
+    <>
+      <AppBarStyled position="sticky">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
+            <Title
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+            >
+              SAMUEL AGUILAR
+            </Title>
+            <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
+              <ButtonStyled onClick={handleClick}>
+                Servicios
+              </ButtonStyled>
+              <ButtonStyled>
+                Contactame
+              </ButtonStyled>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBarStyled>
+      <ServicesMenu 
+        open={open} 
+        anchorEl={anchorEl} 
+        setAnchorEl={setAnchorEl} 
+        handleClose={handleClose} 
+        
+        />
+    </>
   );
 };
