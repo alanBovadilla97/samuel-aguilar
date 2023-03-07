@@ -2,6 +2,8 @@ import { Box, Container, Typography, styled, Grid } from "@mui/material";
 // icons
 import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
 import Serviceitem from "./ServiceItem";
+import { useNavigate } from "react-router-dom";
+import { PATH_SERVICES } from "src/routes/path";
 
 // -------------------------------------------------------------------------
 
@@ -40,9 +42,17 @@ const ServicesImage = styled(Container)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function Services () {
+  const navigate = useNavigate();
+
+  const handleNavigate = (path) => {
+    navigate(path);
+  };
+
   const SERVICES = [
     {
-      title: 'Contabilidad', icon: <AccountBalanceOutlinedIcon />
+      title: 'Contabilidad', 
+      icon: <AccountBalanceOutlinedIcon />,
+      action: () => handleNavigate(PATH_SERVICES.accounting)
     },
     {
       title: 'Auditorias', icon: <AccountBalanceOutlinedIcon />
@@ -64,7 +74,7 @@ export default function Services () {
           In hac habitasse platea dictumst. Aliquam accumsan, ante placerat aliquam lacinia, velit nunc tincidunt massa, id euismod augue 
           dui quis ex.
         </Subtitle>
-        <Grid container mt={5}>
+        <Grid container mt={5} spacing={5}>
           <Grid item xs={6}>
             <Grid container spacing={2}>
               {SERVICES.map(service => (

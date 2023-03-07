@@ -1,10 +1,20 @@
-import { Avatar, Stack, Typography, styled } from "@mui/material";
+import { Avatar, Stack, Typography, styled, Tooltip } from "@mui/material";
 
 // -------------------------------------------------------------------------
 
 const StackStyled = styled(Stack)(({ theme }) => ({
   alignItems: 'center',
-  gap: theme.spacing(0.5)
+  gap: theme.spacing(0.5),
+  border: '1px solid transparent',
+  transition: 'transform 200ms',
+  paddingTop: theme.spacing(1),
+  paddingBottom: theme.spacing(1),
+  '&:hover': {
+    transform: 'scale(1.1)',
+    borderRadius: '5px',
+    cursor: 'pointer',
+    backgroundColor: 'rgba(0, 0, 0, 0.2)'
+  }
 }));
 
 const AvatarStyled = styled(Avatar)(({ theme }) => ({
@@ -30,7 +40,8 @@ const Description = styled(Typography)(({ theme }) => ({
 
 export default function Serviceitem ({ service }) {
   return(
-    <StackStyled>
+    <Tooltip title="Leer mas" placement="top" arrow>
+    <StackStyled onClick={service.action}>
       <AvatarStyled>{service.icon}</AvatarStyled>
       <Title>{service.title}</Title>
       <Description>
@@ -38,5 +49,6 @@ export default function Serviceitem ({ service }) {
         Cras sit amet rhoncus lectus. Ut eu euismod ex, vitae ultrices neque. 
       </Description>
     </StackStyled>
+    </Tooltip>
   );
 };
