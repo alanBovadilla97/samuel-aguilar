@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.65432246.css",
-    "main.js": "/static/js/main.53bfa8ec.js",
-    "static/js/463.e73b29b0.chunk.js": "/static/js/463.e73b29b0.chunk.js",
-    "static/js/57.ad4457c8.chunk.js": "/static/js/57.ad4457c8.chunk.js",
-    "static/js/787.0d0de9e9.chunk.js": "/static/js/787.0d0de9e9.chunk.js",
-    "static/js/668.8e8a468d.chunk.js": "/static/js/668.8e8a468d.chunk.js",
-    "index.html": "/index.html",
-    "main.65432246.css.map": "/static/css/main.65432246.css.map",
-    "main.53bfa8ec.js.map": "/static/js/main.53bfa8ec.js.map",
-    "463.e73b29b0.chunk.js.map": "/static/js/463.e73b29b0.chunk.js.map",
-    "57.ad4457c8.chunk.js.map": "/static/js/57.ad4457c8.chunk.js.map",
-    "787.0d0de9e9.chunk.js.map": "/static/js/787.0d0de9e9.chunk.js.map",
-    "668.8e8a468d.chunk.js.map": "/static/js/668.8e8a468d.chunk.js.map"
+    "main.css": "/samuel-aguilar/static/css/main.65432246.css",
+    "main.js": "/samuel-aguilar/static/js/main.9eb04380.js",
+    "static/js/463.4abae755.chunk.js": "/samuel-aguilar/static/js/463.4abae755.chunk.js",
+    "static/js/57.ac775d22.chunk.js": "/samuel-aguilar/static/js/57.ac775d22.chunk.js",
+    "static/js/787.0d0de9e9.chunk.js": "/samuel-aguilar/static/js/787.0d0de9e9.chunk.js",
+    "static/js/668.8e8a468d.chunk.js": "/samuel-aguilar/static/js/668.8e8a468d.chunk.js",
+    "index.html": "/samuel-aguilar/index.html",
+    "main.65432246.css.map": "/samuel-aguilar/static/css/main.65432246.css.map",
+    "main.9eb04380.js.map": "/samuel-aguilar/static/js/main.9eb04380.js.map",
+    "463.4abae755.chunk.js.map": "/samuel-aguilar/static/js/463.4abae755.chunk.js.map",
+    "57.ac775d22.chunk.js.map": "/samuel-aguilar/static/js/57.ac775d22.chunk.js.map",
+    "787.0d0de9e9.chunk.js.map": "/samuel-aguilar/static/js/787.0d0de9e9.chunk.js.map",
+    "668.8e8a468d.chunk.js.map": "/samuel-aguilar/static/js/668.8e8a468d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65432246.css",
-    "static/js/main.53bfa8ec.js"
+    "static/js/main.9eb04380.js"
   ]
 }
