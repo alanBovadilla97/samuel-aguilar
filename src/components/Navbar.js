@@ -37,6 +37,11 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
+  const handleClickContactMe = () => {
+    const contactMe = document.getElementById('contact-me');
+    contactMe.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return(
     <>
       <AppBarStyled position="sticky">
@@ -54,7 +59,7 @@ export default function Navbar() {
               <ButtonStyled onClick={handleClick}>
                 Servicios
               </ButtonStyled>
-              <ButtonStyled>
+              <ButtonStyled onClick={handleClickContactMe}>
                 Contactame
               </ButtonStyled>
             </Box>

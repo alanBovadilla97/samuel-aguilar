@@ -10,7 +10,7 @@ const StackStyled = styled(Stack)(({ theme }) => ({
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
   '&:hover': {
-    transform: 'scale(1.1)',
+    transform: 'scale(1)',
     borderRadius: '5px',
     cursor: 'pointer',
     backgroundColor: 'rgba(0, 0, 0, 0.2)'

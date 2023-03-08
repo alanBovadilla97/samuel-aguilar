@@ -33,7 +33,7 @@ const ButtonServices = styled(Button)(({ theme }) => ({
   border: '4px solid',
   borderRadius: 0,
   padding: `${theme.spacing(0.5)} ${theme.spacing(8)}`,
-  fontSize: '1rem'
+  fontSize: '1rem',
 }));
 
 // -------------------------------------------------------------------------

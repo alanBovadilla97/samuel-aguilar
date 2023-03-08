@@ -17,7 +17,7 @@ const Title = styled(Typography)(({ theme }) => ({
 
 export default function ContactMe() {
   return(
-    <BoxStyled p={4}>
+    <BoxStyled p={4} id="contact-me">
       <Container maxWidth="xl">
         <Title variant="h3">Contactame</Title>
         <Grid container spacing={2} sx={{ justifyContent: 'center' }}>

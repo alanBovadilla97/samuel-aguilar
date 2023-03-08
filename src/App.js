@@ -3,6 +3,7 @@ import Router from './routes';
 import ThemeConfig from './theme';
 import NotistackProvider from './components/NotistackProvider';
 import { HelmetProvider } from 'react-helmet-async';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <ThemePrimaryColor>
         <NotistackProvider>
           <HelmetProvider>
+            <ScrollToTop />
             <Router />
           </HelmetProvider>
         </NotistackProvider>
