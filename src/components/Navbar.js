@@ -59,6 +59,12 @@ export default function Navbar() {
               <ButtonStyled onClick={handleClick}>
                 Servicios
               </ButtonStyled>
+              <ServicesMenu 
+                open={open} 
+                anchorEl={anchorEl} 
+                setAnchorEl={setAnchorEl} 
+                handleClose={handleClose} 
+              />
               <ButtonStyled onClick={handleClickContactMe}>
                 Contactame
               </ButtonStyled>
@@ -66,13 +72,7 @@ export default function Navbar() {
           </Toolbar>
         </Container>
       </AppBarStyled>
-      <ServicesMenu 
-        open={open} 
-        anchorEl={anchorEl} 
-        setAnchorEl={setAnchorEl} 
-        handleClose={handleClose} 
-        
-        />
+     
     </>
   );
 };
