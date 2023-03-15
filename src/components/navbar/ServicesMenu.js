@@ -26,6 +26,7 @@ export default function ServicesMenu({ open, anchorEl, setAnchorEl, handleClose 
       onClose={handleClose}
       MenuListProps={{ onMouseLeave: handleClose }}
     >
+      <MenuItemStyled>Indice</MenuItemStyled>
       <MenuItemStyled onClick={() => handleNavigate(PATH_SERVICES.accounting)}>Contabilidad</MenuItemStyled>
       <MenuItemStyled>Auditorias</MenuItemStyled>
     </Menu>

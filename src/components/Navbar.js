@@ -18,7 +18,9 @@ const Title = styled(Typography)(({ theme }) => ({
   textDecoration: 'none',
 }));
 
-const ButtonStyled = styled(Button)(({ theme }) => ({
+const ButtonStyled = styled((props) => {
+  return <Button size="large" {...props} />
+})(({ theme }) => ({
   color: theme.palette.common.black,
   fontWeight: 600
 }));

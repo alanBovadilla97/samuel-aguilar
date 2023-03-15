@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
-import { useRoutes } from "react-router-dom";
+import { Navigate, useRoutes } from "react-router-dom";
 import LoadingScreen from "src/components/LoadingScreen";
+import MainLayout from "src/layouts/main/Index";
 
 // -------------------------------------------------------------------------
 
@@ -28,15 +29,30 @@ export default function Router() {
   return useRoutes([
     {
       path: '/',
-      element: <Index />
+      element: <MainLayout />,
+      children: [
+        {
+          path: '/',
+          element: <Index />
+        }
+      ]
     },
     {
       path: 'servicios',
+      element: <MainLayout />,
       children: [
         {
           path: 'contabilidad',
           element: <Accounting />
         }
+      ]
+    },
+    {
+      path: '*',
+      element: <MainLayout />,
+      children: [
+        { path: '404', element: <p>Error 404</p> },
+        { path: '*', element: <Navigate to="/404" replace /> }
       ]
     }
   ])

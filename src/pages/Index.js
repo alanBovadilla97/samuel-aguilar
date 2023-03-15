@@ -1,6 +1,6 @@
 import IntroImage from "src/components/intro/IntroImage";
 import Services from "src/components/services/Services";
-import ContactMe from "../components/contactMe/ContactMe";
+import ContactMe from "src/components/contactMe/ContactMe";
 
 // -------------------------------------------------------------------------
 
