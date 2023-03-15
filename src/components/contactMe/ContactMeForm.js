@@ -53,8 +53,6 @@ export default function ContactMeForm() {
 
   const { values, errors, isSubmitting, isValid, submitCount, getFieldProps, resetForm, validateForm } = formik;
 
-  console.log(formik);
-
   useEffect(() => {
     if (state.succeeded) {
       resetForm();

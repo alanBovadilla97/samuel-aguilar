@@ -40,7 +40,7 @@ export default function Accounting() {
   return(
     <Page title='Contabilidad | Samuel Aguilar'>
       <ImageTitle path="/static/accounting.jpeg" title="Contabilidad" />
-      <Container maxWidth="lg" sx={{ py: 2 }}>
+      <Container maxWidth="contentSize" sx={{ py: 2 }}>
         <Typography variant="h3">Contabilidad</Typography>
         <Typography pt={2}>
           Nuestra experiencia nos permite ofrecer una variedad de servicios respaldados con alianzas de 

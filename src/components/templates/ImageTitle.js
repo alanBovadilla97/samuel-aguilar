@@ -11,7 +11,8 @@ const ImageBox = styled((props) => {
 })(({ theme }) => ({
   width: '100%',
   height: '60vh',
-  objectFit: 'cover'
+  objectFit: 'cover',
+  objectPosition: '0 25%'
 }));
 
 const BoxTitle = styled(Box)(({ theme }) => ({

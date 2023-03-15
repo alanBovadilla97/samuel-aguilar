@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import { Box, Button, styled, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+import { PATH_SERVICES } from 'src/routes/path';
 
 // -------------------------------------------------------------------------
 
@@ -34,12 +36,23 @@ const ButtonServices = styled(Button)(({ theme }) => ({
   borderRadius: 0,
   padding: `${theme.spacing(0.5)} ${theme.spacing(8)}`,
   fontSize: '1rem',
+  letterSpacing: 2,
+  '&:hover': {
+    background: theme.palette.common.white,
+    color: theme.palette.common.black,
+    border: `4px solid ${theme.palette.common.white}`
+  }
 }));
 
 // -------------------------------------------------------------------------
 
 export default function IntroImage() {
+  const navigate = useNavigate();
   const [offset, setOffset] = useState(0);
+
+  const handleOpenServices = () => {
+    navigate(PATH_SERVICES.index);
+  };
 
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
@@ -58,7 +71,7 @@ export default function IntroImage() {
         <Typography variant="h5" sx={{ lineHeight: 0 }}>
           Experto en contabilidad
         </Typography>
-        <ButtonServices variant="outlined" color="inherit">
+        <ButtonServices variant="outlined" color="inherit" onClick={handleOpenServices}>
           Servicios
         </ButtonServices>
       </Title>

@@ -10,4 +10,6 @@ export const PATH_PAGE = {
 
 export const PATH_SERVICES = {
   root: SERVICES_ROOT,
-  accounting: path(SERVICES_ROOT, '/contabilidad')   }
+  index: path(SERVICES_ROOT, '/indice'),
+  accounting: path(SERVICES_ROOT, '/contabilidad')
+};

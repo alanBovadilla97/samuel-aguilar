@@ -42,6 +42,10 @@ export default function Router() {
       element: <MainLayout />,
       children: [
         {
+          path: 'indice',
+          element: <ServicesIndex />
+        },
+        {
           path: 'contabilidad',
           element: <Accounting />
         }
@@ -62,4 +66,5 @@ export default function Router() {
 
 const Index = Loadable(lazy(() => import('src/pages/Index')));
 // services
+const ServicesIndex = Loadable(lazy(() => import('src/pages/services/Index')));
 const Accounting = Loadable(lazy(() => import('src/pages/services/Accounting')));
