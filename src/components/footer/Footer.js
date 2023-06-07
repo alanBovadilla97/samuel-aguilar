@@ -28,12 +28,10 @@ export default function Footer() {
   };
 
   const ABOUT = [
-    { text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel congue tellus. 
-        Pellentesque congue lacinia elit id condimentum. In hac habitasse platea dictumst. 
-        Aliquam accumsan, ante placerat aliquam lacinia, velit nunc tincidunt massa, i
-        d euismod augue dui quis ex. Duis elementum ac lorem vitae tincidunt. Praesent velit magna, 
-        viverra et orci eu, sollicitudin aliquet sapien. Cras sit amet rhoncus lectus. Ut eu euismod ex, 
-        vitae ultrices neque. Proin auctor sem ut ipsum sodales, eget congue mauris vestibulum.`
+    { text: `Licenciado egresado de la Universidad de Guadalajara altamente capacitado 
+    y con una amplia experiencia en el campo de la contabilidad. Con un sólido conocimiento de los 
+    principios contables y las normativas fiscales, ofreciendo soluciones financieras precisas y estratégicas 
+    para satisfacer las necesidades de su empresa.`
     }
   ];
 

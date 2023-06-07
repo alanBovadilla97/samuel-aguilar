@@ -55,7 +55,7 @@ export default function Navbar() {
               component="a"
               href="/"
             >
-              SAMUEL AGUILAR
+              BLACKSTOCK
             </Title>
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
               <ButtonStyled onClick={handleClick}>

@@ -66,10 +66,10 @@ export default function IntroImage() {
     <Container>
       <Title>
         <Typography variant="h2" letterSpacing={8}>
-          SAMUEL AGUILAR
+          BLACKSTOCK
         </Typography>
         <Typography variant="h5" sx={{ lineHeight: 0 }}>
-          Experto en contabilidad
+          Expertos en contabilidad
         </Typography>
         <ButtonServices variant="outlined" color="inherit" onClick={handleOpenServices}>
           Servicios
