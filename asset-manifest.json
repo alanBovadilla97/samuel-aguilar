@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/samuel-aguilar/static/css/main.65432246.css",
-    "main.js": "/samuel-aguilar/static/js/main.248975d4.js",
-    "static/js/463.7c4301d2.chunk.js": "/samuel-aguilar/static/js/463.7c4301d2.chunk.js",
-    "static/js/491.a7189264.chunk.js": "/samuel-aguilar/static/js/491.a7189264.chunk.js",
-    "static/js/971.2e47c8ab.chunk.js": "/samuel-aguilar/static/js/971.2e47c8ab.chunk.js",
-    "static/js/787.0d0de9e9.chunk.js": "/samuel-aguilar/static/js/787.0d0de9e9.chunk.js",
-    "static/js/668.8e8a468d.chunk.js": "/samuel-aguilar/static/js/668.8e8a468d.chunk.js",
-    "index.html": "/samuel-aguilar/index.html",
-    "main.65432246.css.map": "/samuel-aguilar/static/css/main.65432246.css.map",
-    "main.248975d4.js.map": "/samuel-aguilar/static/js/main.248975d4.js.map",
-    "463.7c4301d2.chunk.js.map": "/samuel-aguilar/static/js/463.7c4301d2.chunk.js.map",
-    "491.a7189264.chunk.js.map": "/samuel-aguilar/static/js/491.a7189264.chunk.js.map",
-    "971.2e47c8ab.chunk.js.map": "/samuel-aguilar/static/js/971.2e47c8ab.chunk.js.map",
-    "787.0d0de9e9.chunk.js.map": "/samuel-aguilar/static/js/787.0d0de9e9.chunk.js.map",
-    "668.8e8a468d.chunk.js.map": "/samuel-aguilar/static/js/668.8e8a468d.chunk.js.map"
+    "main.css": "/blackstock.com.mx/static/css/main.65432246.css",
+    "main.js": "/blackstock.com.mx/static/js/main.4f4cb09e.js",
+    "static/js/463.8f08dc6b.chunk.js": "/blackstock.com.mx/static/js/463.8f08dc6b.chunk.js",
+    "static/js/491.7f9146a5.chunk.js": "/blackstock.com.mx/static/js/491.7f9146a5.chunk.js",
+    "static/js/971.bcb249fb.chunk.js": "/blackstock.com.mx/static/js/971.bcb249fb.chunk.js",
+    "static/js/787.0d0de9e9.chunk.js": "/blackstock.com.mx/static/js/787.0d0de9e9.chunk.js",
+    "static/js/668.8e8a468d.chunk.js": "/blackstock.com.mx/static/js/668.8e8a468d.chunk.js",
+    "index.html": "/blackstock.com.mx/index.html",
+    "main.65432246.css.map": "/blackstock.com.mx/static/css/main.65432246.css.map",
+    "main.4f4cb09e.js.map": "/blackstock.com.mx/static/js/main.4f4cb09e.js.map",
+    "463.8f08dc6b.chunk.js.map": "/blackstock.com.mx/static/js/463.8f08dc6b.chunk.js.map",
+    "491.7f9146a5.chunk.js.map": "/blackstock.com.mx/static/js/491.7f9146a5.chunk.js.map",
+    "971.bcb249fb.chunk.js.map": "/blackstock.com.mx/static/js/971.bcb249fb.chunk.js.map",
+    "787.0d0de9e9.chunk.js.map": "/blackstock.com.mx/static/js/787.0d0de9e9.chunk.js.map",
+    "668.8e8a468d.chunk.js.map": "/blackstock.com.mx/static/js/668.8e8a468d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65432246.css",
-    "static/js/main.248975d4.js"
+    "static/js/main.4f4cb09e.js"
   ]
 }
