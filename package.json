@@ -2,7 +2,6 @@
   "name": "samuel-aguilar",
   "version": "0.1.0",
   "private": true,
-  "homepage": "blackstock.com.mx",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
