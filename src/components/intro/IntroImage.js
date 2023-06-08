@@ -10,9 +10,10 @@ const Container = styled(Box)(() => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center'
-}))
+}));
 
 const Title = styled(Box)(({ theme }) => ({
+  width: '100%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
@@ -77,7 +78,7 @@ export default function IntroImage() {
       </Title>
       <BoxStyled
         component="img" 
-        src={process.env.PUBLIC_URL + '/static/landmark.jpg'} 
+        src={process.env.PUBLIC_URL + '/static/skyscraper.png'} 
         alt="logo"
         // sx={{ transform: `translate(0px, ${offset}px)`}}
       />

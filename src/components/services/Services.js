@@ -30,7 +30,7 @@ const Subtitle = styled(Typography)(({ theme }) => ({
 }));
 
 const ServicesImage = styled(Container)(({ theme }) => ({
-  backgroundImage: `url(${process.env.PUBLIC_URL + '/static/services.jpeg'})`,
+  backgroundImage: `url(${process.env.PUBLIC_URL + '/static/corp-meeting.jpeg'})`,
   width: '100%',
   height: '100%',
   boxShadow: `0 0 15px 6px ${theme.palette.grey[800]} inset`,
