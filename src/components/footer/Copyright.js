@@ -20,7 +20,7 @@ export default function Copyright() {
   return (
     <BoxStyled>
       <TypographyStyled>
-        ©2023. Samuel Aguilar
+        ©2023. BLACKSTOCK
       </TypographyStyled>
     </BoxStyled>
   );

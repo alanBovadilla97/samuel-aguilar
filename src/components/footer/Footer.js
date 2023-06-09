@@ -28,10 +28,10 @@ export default function Footer() {
   };
 
   const ABOUT = [
-    { text: `Licenciado egresado de la Universidad de Guadalajara altamente capacitado 
-    y con una amplia experiencia en el campo de la contabilidad. Con un sólido conocimiento de los 
-    principios contables y las normativas fiscales, ofreciendo soluciones financieras precisas y estratégicas 
-    para satisfacer las necesidades de su empresa.`
+    { text: `Somos una empresa que ofrece servicios contables profesionales 
+      y confiables a sus clientes. Con un equipo de contadores altamente capacitados y experimentados, 
+      Blackstock se dedica a brindar soluciones integrales de contabilidad adaptadas a las necesidades 
+      individuales de cada cliente.`
     }
   ];
 
@@ -58,7 +58,7 @@ export default function Footer() {
         <Container maxWidth="xl">
           <Grid container>
             <Grid item xs={6}>
-              <FooterList title="Samuel Aguilar" items={ABOUT} />
+              <FooterList title="BLACKSTOCK" items={ABOUT} />
             </Grid>
             <Grid item xs={3}>
               <FooterList title="Compañia" items={COMPANY} />
