@@ -2,6 +2,7 @@ import { useState } from "react";
 // utils
 import ReactCardFlip from "react-card-flip";
 import { Box, Stack, styled, Typography, useTheme } from "@mui/material";
+import Map from "./Map";
 
 // -------------------------------------------------------------------------
 
@@ -65,8 +66,8 @@ export default function ContactMeCard() {
         back: classes.card
       }}
       containerStyle={{
-        height: '200px',
-        width: '400px'
+        height: '100%',
+        width: '100%'
       }}
     >
       <Box onClick={handleFlipCard} sx={{ '& *': {fontFamily: 'none' }}}>
@@ -80,7 +81,9 @@ export default function ContactMeCard() {
         </Stack>
         <Email>samuel.aguilar.lcp@gmail.com</Email>
       </Box>
-      <p onClick={handleFlipCard}>Back</p>
+      {/* <p onClick={handleFlipCard}> */}
+        <Map />
+      {/* </p> */}
     </ReactCardFlip>
   );
 };

@@ -26,11 +26,11 @@ export default function ContactMe() {
     <BoxStyled px={4} py={6} id="contact-me">
       <ContainerStyled maxWidth="xl">
         <Title variant="h3">Contactame</Title>
-        <Grid container spacing={2} sx={{ justifyContent: 'center' }}>
-          <Grid item xs={12} md={5} sx={{ display: 'flex', alignItems: 'center' }}>
+        <Grid container spacing={5} sx={{ justifyContent: 'center' }}>
+          <Grid item xs={6}>
             <ContactMeCard />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             <ContactMeForm />
           </Grid>
         </Grid>
