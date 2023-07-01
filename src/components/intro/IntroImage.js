@@ -66,12 +66,13 @@ export default function IntroImage() {
   return(
     <Container>
       <Title>
-        <Typography variant="h2" letterSpacing={8}>
+        {/* <Typography variant="h2" letterSpacing={8}>
           BLACKSTOCK
         </Typography>
         <Typography variant="h5" sx={{ lineHeight: 0 }}>
           Expertos en contabilidad
-        </Typography>
+        </Typography> */}
+        <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-white.png'} alt="BLACKSTOCK" sx={{ width: 400 }} />
         <ButtonServices variant="outlined" color="inherit" onClick={handleOpenServices}>
           Servicios
         </ButtonServices>

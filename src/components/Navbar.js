@@ -49,14 +49,7 @@ export default function Navbar() {
       <AppBarStyled position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Title
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-            >
-              BLACKSTOCK
-            </Title>
+            <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-sec.png'}  alt="logo" sx={{ width: 150 }} />
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
               <ButtonStyled onClick={handleClick}>
                 Servicios
