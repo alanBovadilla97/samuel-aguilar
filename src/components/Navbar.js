@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Container, styled, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Container, styled, Toolbar } from "@mui/material";
 import { useState } from "react";
 import ServicesMenu from "./navbar/ServicesMenu";
 import { useNavigate } from "react-router-dom";
@@ -8,16 +8,6 @@ import { PATH_PAGE } from "src/routes/path";
 
 const AppBarStyled = styled(AppBar)(({ theme }) => ({
   background: theme.palette.common.white
-}));
-
-const Title = styled(Typography)(({ theme }) => ({
-  marginRight: 2,
-  display: { xs: 'none', md: 'flex' },
-  fontFamily: 'monospace',
-  fontWeight: 700,
-  letterSpacing: '.3rem',
-  color: theme.palette.common.black,
-  textDecoration: 'none',
 }));
 
 const ButtonStyled = styled((props) => {

@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
-
-import { Box, Button, styled, Typography } from "@mui/material";
+import { Box, Button, styled } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { PATH_SERVICES } from 'src/routes/path';
 
@@ -49,29 +47,14 @@ const ButtonServices = styled(Button)(({ theme }) => ({
 
 export default function IntroImage() {
   const navigate = useNavigate();
-  const [offset, setOffset] = useState(0);
 
   const handleOpenServices = () => {
     navigate(PATH_SERVICES.index);
   };
 
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-}, []);
-
   return(
     <Container>
       <Title>
-        {/* <Typography variant="h2" letterSpacing={8}>
-          BLACKSTOCK
-        </Typography>
-        <Typography variant="h5" sx={{ lineHeight: 0 }}>
-          Expertos en contabilidad
-        </Typography> */}
         <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-white.png'} alt="BLACKSTOCK" sx={{ width: 400 }} />
         <ButtonServices variant="outlined" color="inherit" onClick={handleOpenServices}>
           Servicios
@@ -81,8 +64,7 @@ export default function IntroImage() {
         component="img" 
         src={process.env.PUBLIC_URL + '/static/skyscraper.png'} 
         alt="logo"
-        // sx={{ transform: `translate(0px, ${offset}px)`}}
       />
     </Container>
   );
-}
+};

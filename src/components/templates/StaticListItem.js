@@ -1,4 +1,4 @@
-import { ListItemButton, ListItemText, Stack, styled, Avatar, Typography } from "@mui/material";
+import { ListItemButton, ListItemText, Stack, styled, Avatar } from "@mui/material";
 import { useState } from "react";
 
 // -------------------------------------------------------------------------

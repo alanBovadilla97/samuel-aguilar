@@ -1,89 +1,95 @@
 import { useState } from "react";
-// utils
 import ReactCardFlip from "react-card-flip";
-import { Box, Stack, styled, Typography, useTheme } from "@mui/material";
+
+import { Box, IconButton, Stack, Tooltip, useTheme } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
+
 import Map from "./Map";
 
 // -------------------------------------------------------------------------
 
-const Name = styled(Typography)(({ theme }) => ({
-  fontWeight: 600,
-  fontSize: '0.7rem',
-  letterSpacing: '1px',
-  '&::first-letter': {
-    fontSize: '1rem'
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    '& *': {
+      fontFamily: 'none' 
+    }
+  },
+  logo: {
+    width: '30%',
+    alignSelf: 'flex-end'
+  },
+  infoContainer: {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'flex-end'
+  },
+  info: {
+    width: '35%'
+  },
+  contactMeCardContainer: {
+    height: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: theme.spacing(0.5)
+  },
+  rotateButton: {
+    alignSelf: 'flex-end'
   }
-}));
-
-const LastName = styled(Typography)(() => ({
-  fontWeight: 600,
-  letterSpacing: '1px'
-}));
-
-const Description = styled(Typography)(() => ({
-  fontWeight: 600,
-  letterSpacing: '1px',
-  fontSize: '0.85rem'
-}));
-
-const Phone = styled(Typography)(() => ({
-  fontWeight: 600,
-  fontSize: '0.9rem',
-  textAlign: 'left'
-}));
-
-const Email = styled(Typography)(() => ({
-  fontWeight: 600,
-  fontSize: '0.9rem',
-  textAlign: 'right'
 }));
 
 // -------------------------------------------------------------------------
 
 export default function ContactMeCard() {
   const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleFlipCard = () => {
-    setIsFlipped(st => !st);
-  };
+  const classes = useStyles();
   const theme = useTheme();
-
-  const classes = {
+  const cardClasses = {
     card: {
       borderRadius: 5,
-      padding: theme.spacing(2),
+      padding: theme.spacing(4),
       background: 'url("https://www.transparenttextures.com/patterns/paper.png"), #fff',
       fontFamily: 'none',
       height: '100%'
     }
   };
 
+  const handleFlipCard = () => {
+    setIsFlipped(st => !st);
+  };
+
   return(
-    <ReactCardFlip
-      isFlipped={isFlipped}
-      cardStyles={{
-        front: classes.card,
-        back: classes.card
-      }}
-      containerStyle={{
-        height: '100%',
-        width: '100%'
-      }}
-    >
-      <Box onClick={handleFlipCard} sx={{ '& *': {fontFamily: 'none' }}}>
-        <Phone>33-1280-2544</Phone>
-        <Stack alignItems="center" py={5}>
-          <Stack direction="row" gap={0.5}>
-            <Name>SAMUEL</Name>
-            <LastName>AGUILAR</LastName>
-          </Stack>
-          <Description>Contador Público</Description>
-        </Stack>
-        <Email>samuel.aguilar.lcp@gmail.com</Email>
-      </Box>
-      {/* <p onClick={handleFlipCard}> */}
-        <Map />
-      {/* </p> */}
-    </ReactCardFlip>
+    <Stack className={classes.contactMeCardContainer}>
+      <ReactCardFlip
+        isFlipped={isFlipped}
+        cardStyles={{
+          front: cardClasses.card,
+          back: cardClasses.card
+        }}
+        containerStyle={{
+          height: '100%',
+          width: '100%'
+        }}
+      >
+        <Box className={classes.root}>
+          <Box component="img" src='/static/logo-sec.png'  alt="logo" className={classes.logo} />
+          <Box className={classes.infoContainer}>
+            <Box component="img" src="/static/signature-2.png" alt="signature" className={classes.info} />
+          </Box>
+        </Box>
+        {/* <p onClick={handleFlipCard}> */}
+          <Map />
+        {/* </p> */}
+      </ReactCardFlip>
+      <Tooltip title="Rotate" arrow placement="top">
+        <IconButton  className={classes.rotateButton} onClick={handleFlipCard}>
+          <ThreeSixtyIcon />
+        </IconButton>
+      </Tooltip>
+    </Stack>
   );
 };
