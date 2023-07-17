@@ -5,6 +5,7 @@ function path(root, sublink) {
 const SERVICES_ROOT = '/servicios';
 
 export const PATH_PAGE = {
+  home: '/',
   page404: '/404'
 };
 

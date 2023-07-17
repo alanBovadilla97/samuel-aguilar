@@ -11,9 +11,15 @@ const AvatarStyled = styled(Avatar)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function SocialNetworkItem({ sns }) {
+  const handleOpenSns = () => {
+    if (sns.url) {
+      window.open(sns.url, '_blank');
+    }
+  };
+
   return(
     <Tooltip title={sns.name} placement="top" arrow>
-      <AvatarStyled>
+      <AvatarStyled onClick={handleOpenSns}>
         {sns.icon}
       </AvatarStyled>
     </Tooltip>

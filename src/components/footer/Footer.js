@@ -41,13 +41,13 @@ export default function Footer() {
 
   const CONTACT = [
     { text: 'Jorge Isaac 688, Guadalajara, Jalisco.', icon: <BusinessIcon />, action: handleOpenLocation },
-    { text: 'samuel.aguilar.lcp@gmail.com', icon: <ContactMailIcon /> },
+    { text: 'contacto@blackstock.com.mx', icon: <ContactMailIcon /> },
     { text: '33-1280-2544', icon: <PhoneIcon /> }
   ];
 
   const SNS = [
-    { name: 'Facebook', icon: <FacebookIcon /> },
-    { name: 'Instagram', icon: <InstagramIcon /> },
+    { name: 'Facebook', icon: <FacebookIcon />, url: 'https://www.facebook.com/BlackStock-Tax-and-Legal-112262551906624' },
+    { name: 'Instagram', icon: <InstagramIcon />, url: 'https://www.instagram.com/bstaxandlegal' },
     { name: 'Linkedin', icon: <LinkedInIcon /> }
   ];
 
@@ -58,7 +58,7 @@ export default function Footer() {
         <Container maxWidth="xl">
           <Grid container>
             <Grid item xs={6}>
-              <FooterList title="BLACKSTOCK" items={ABOUT} />
+              <FooterList img={process.env.PUBLIC_URL + '/static/logo-white.png'} items={ABOUT} />
             </Grid>
             <Grid item xs={3}>
               <FooterList title="Compañia" items={COMPANY} />

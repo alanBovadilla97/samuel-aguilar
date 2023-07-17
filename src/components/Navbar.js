@@ -1,6 +1,8 @@
 import { AppBar, Box, Button, Container, styled, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import ServicesMenu from "./navbar/ServicesMenu";
+import { useNavigate } from "react-router-dom";
+import { PATH_PAGE } from "src/routes/path";
 
 // -------------------------------------------------------------------------
 
@@ -28,6 +30,7 @@ const ButtonStyled = styled((props) => {
 // -------------------------------------------------------------------------
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -44,12 +47,22 @@ export default function Navbar() {
     contactMe.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleNavigateToHome = () => {
+    navigate(PATH_PAGE.home);
+  };
+
   return(
     <>
       <AppBarStyled position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-            <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-sec.png'}  alt="logo" sx={{ width: 150 }} />
+            <Box 
+              component="img" 
+              src={process.env.PUBLIC_URL + '/static/logo-sec.png'}  
+              alt="logo" 
+              sx={{ width: 150, '&:hover': { cursor: 'pointer' } }}
+              onClick={handleNavigateToHome}
+            />
             <Box sx={{ display: { xs: 'none', sm: 'flex' }, gap: 1 }}>
               <ButtonStyled onClick={handleClick}>
                 Servicios
