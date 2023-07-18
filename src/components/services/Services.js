@@ -30,7 +30,7 @@ const Subtitle = styled(Typography)(({ theme }) => ({
 }));
 
 const ServicesImage = styled(Container)(({ theme }) => ({
-  backgroundImage: `url(${process.env.PUBLIC_URL + '/static/corp-meeting.jpeg'})`,
+  backgroundImage: 'url(/static/corp-meeting.jpeg)',
   width: '100%',
   height: '100%',
   boxShadow: `0 0 15px 6px ${theme.palette.grey[800]} inset`,
@@ -75,16 +75,16 @@ export default function Services () {
           dui quis ex.
         </Subtitle>
         <Grid container mt={5} spacing={5}>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <Grid container spacing={2}>
               {SERVICES.map(service => (
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                   <Serviceitem service={service} />
                 </Grid>
               ))}
             </Grid>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={0} md={6}>
             <ServicesImage />
           </Grid>
         </Grid>

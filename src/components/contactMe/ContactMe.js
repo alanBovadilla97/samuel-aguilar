@@ -28,7 +28,7 @@ export default function ContactMe() {
       <ContainerStyled maxWidth="xl">
         <Title variant="h3">Contactame</Title>
         <Grid container spacing={5} sx={{ justifyContent: 'center' }}>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={6}>
             <ContactMeCard />
           </Grid>
           <Grid item xs={12} md={6}>

@@ -85,7 +85,7 @@ export default function ContactMeCard() {
           <Map />
         {/* </p> */}
       </ReactCardFlip>
-      <Tooltip title="Rotate" arrow placement="top">
+      <Tooltip title="Rotar" arrow placement="top">
         <IconButton  className={classes.rotateButton} onClick={handleFlipCard}>
           <ThreeSixtyIcon />
         </IconButton>

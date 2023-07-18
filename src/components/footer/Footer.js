@@ -51,19 +51,18 @@ export default function Footer() {
     { name: 'Linkedin', icon: <LinkedInIcon /> }
   ];
 
-
   return (
     <>
       <BoxStyled>
         <Container maxWidth="xl">
           <Grid container>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <FooterList img={process.env.PUBLIC_URL + '/static/logo-white.png'} items={ABOUT} />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3}>
               <FooterList title="Compañia" items={COMPANY} />
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={12} md={3}>
               <FooterList title="Contacto" items={CONTACT} />
             </Grid>
           </Grid>

@@ -62,7 +62,7 @@ export default function IntroImage() {
       </Title>
       <BoxStyled
         component="img" 
-        src={process.env.PUBLIC_URL + '/static/skyscraper.png'} 
+        src='/static/skyscraper.png'
         alt="logo"
       />
     </Container>
