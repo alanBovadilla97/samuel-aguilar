@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
-import { Box, IconButton, Stack, Tooltip, useTheme } from "@mui/material";
+import { Box, Grid, IconButton, Stack, Tooltip, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
 
@@ -32,10 +32,22 @@ const useStyles = makeStyles((theme) => ({
     width: '35%'
   },
   contactMeCardContainer: {
-    height: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: theme.spacing(0.5)
+    minHeight: '100%'
+  },
+  cardFlipContainer: {
+    [theme.breakpoints.up('xs')]: {
+      height: 200
+    },
+    [theme.breakpoints.up('sm')]: {
+      height: 375
+    },
+    [theme.breakpoints.up('md')]: {
+      height: 'auto'
+    }
+  },
+  rotateButtonContainer: {
+    display: 'flex',
+    justifyContent: 'center'
   },
   rotateButton: {
     alignSelf: 'flex-end'
@@ -63,33 +75,37 @@ export default function ContactMeCard() {
   };
 
   return(
-    <Stack className={classes.contactMeCardContainer}>
-      <ReactCardFlip
-        isFlipped={isFlipped}
-        cardStyles={{
-          front: cardClasses.card,
-          back: cardClasses.card
-        }}
-        containerStyle={{
-          height: '100%',
-          width: '100%'
-        }}
-      >
-        <Box className={classes.root}>
-          <Box component="img" src='/static/logo-sec.png'  alt="logo" className={classes.logo} />
-          <Box className={classes.infoContainer}>
-            <Box component="img" src="/static/signature-2.png" alt="signature" className={classes.info} />
+    <Grid container className={classes.contactMeCardContainer}>
+      <Grid item xs={12} md={11} className={classes.cardFlipContainer}>
+        <ReactCardFlip
+          isFlipped={isFlipped}
+          cardStyles={{
+            front: cardClasses.card,
+            back: cardClasses.card
+          }}
+          containerStyle={{
+            height: '100%',
+            width: '100%'
+          }}
+        >
+          <Box className={classes.root}>
+            <Box component="img" src='/static/logo-sec.png'  alt="logo" className={classes.logo} />
+            <Box className={classes.infoContainer}>
+              <Box component="img" src="/static/signature-2.png" alt="signature" className={classes.info} />
+            </Box>
           </Box>
-        </Box>
-        {/* <p onClick={handleFlipCard}> */}
-          <Map />
-        {/* </p> */}
-      </ReactCardFlip>
-      <Tooltip title="Rotar" arrow placement="top">
-        <IconButton  className={classes.rotateButton} onClick={handleFlipCard}>
-          <ThreeSixtyIcon />
-        </IconButton>
-      </Tooltip>
-    </Stack>
+          {/* <p onClick={handleFlipCard}> */}
+            <Map />
+          {/* </p> */}
+        </ReactCardFlip>
+      </Grid>
+      <Grid item xs={12} md={1} className={classes.rotateButtonContainer}>
+        <Tooltip title="Rotar" arrow placement="top">
+          <IconButton  className={classes.rotateButton} onClick={handleFlipCard}>
+            <ThreeSixtyIcon />
+          </IconButton>
+        </Tooltip>
+      </Grid>
+    </Grid>
   );
 };
