@@ -11,12 +11,13 @@ const MenuItemStyled = styled(MenuItem)(({ theme }) => ({
 
 // -------------------------------------------------------------------------
 
-export default function ServicesMenu({ open, anchorEl, setAnchorEl, handleClose }) {
+export default function ServicesMenu({ open, anchorEl, setAnchorEl, handleClose, setMobileOpen }) {
   const navigate = useNavigate();
 
   const handleNavigate = (path) => {
     navigate(path);
     setAnchorEl(null);
+    setMobileOpen();
   };
   
   return(
