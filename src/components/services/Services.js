@@ -51,17 +51,24 @@ export default function Services () {
   const SERVICES = [
     {
       title: 'Contabilidad', 
-      icon: <AccountBalanceOutlinedIcon />,
+      image: '/static/contabilidad.jpg.webp',
+      description: 'Ofrecemos servicios contables precisos y eficientes para garantizar la integridad financiera de tu empresa',
       action: () => handleNavigate(PATH_SERVICES.accounting)
     },
     {
-      title: 'Auditorias', icon: <AccountBalanceOutlinedIcon />
+      title: 'Auditorias', 
+      image: '/static/auditorias.webp',
+      description: 'Nuestros servicios de auditoría están diseñados para brindarte una evaluación exhaustiva y objetiva de tus estados financieros con un enfoque detallado y profesional'
     },
     {
-      title: 'Test', icon:  <AccountBalanceOutlinedIcon />
+      title: 'Impuestos', 
+      image: 'static/impuestos.jpeg',
+      description: 'Simplificamos la complejidad del cumplimiento tributario para tu empresa. Desde la preparación de declaraciones fiscales hasta la planificación estratégica'
     },
     {
-      title: 'Test', icon:  <AccountBalanceOutlinedIcon />
+      title: 'Consultoria', 
+      image: 'static/consultoria.jpeg',
+      description: 'Nuestra consultoría financiera va más allá de los números. Colaboramos estrechamente contigo para comprender tus metas comerciales y desarrollar estrategias financieras personalizadas'
     }
   ];
 
@@ -70,22 +77,19 @@ export default function Services () {
       <ContainerStyled maxWidth="xl">
         <Title variant="h3">Servicios</Title>
         <Subtitle>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel congue tellus. Pellentesque congue lacinia elit id condimentum. 
-          In hac habitasse platea dictumst. Aliquam accumsan, ante placerat aliquam lacinia, velit nunc tincidunt massa, id euismod augue 
-          dui quis ex.
+          Nuestros servicios contables están diseñados para brindar soluciones integrales a empresas de todos los tamaños. 
+          Nos comprometemos a ayudar a nuestros clientes a mantener una salud financiera sólida, garantizando el 
+          cumplimiento normativo y permitiendo que se enfoquen en el crecimiento y éxito de sus negocios.
         </Subtitle>
         <Grid container mt={5} spacing={5}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12}>
             <Grid container spacing={2}>
               {SERVICES.map(service => (
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} lg={3}>
                   <Serviceitem service={service} />
                 </Grid>
               ))}
             </Grid>
-          </Grid>
-          <Grid item xs={0} md={6}>
-            <ServicesImage />
           </Grid>
         </Grid>
       </ContainerStyled>

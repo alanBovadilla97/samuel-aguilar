@@ -1,4 +1,4 @@
-import { Avatar, Stack, Typography, styled, Tooltip } from "@mui/material";
+import { Avatar, Stack, Typography, styled, Tooltip, Box } from "@mui/material";
 
 // -------------------------------------------------------------------------
 
@@ -9,6 +9,7 @@ const StackStyled = styled(Stack)(({ theme }) => ({
   transition: 'transform 200ms',
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(1),
+  height: '100%',
   '&:hover': {
     transform: 'scale(1)',
     borderRadius: '5px',
@@ -17,22 +18,25 @@ const StackStyled = styled(Stack)(({ theme }) => ({
   }
 }));
 
-const AvatarStyled = styled(Avatar)(({ theme }) => ({
-  width: 50,
-  height: 50,
-  color: theme.palette.grey[800]
+const ServiceImage = styled(Box)(({ theme }) => ({
+ borderRadius: '50%',
+ width: 250,
+ height: 250,
+ objectFit: 'cover'
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
   color: theme.palette.info.contrastText,
   fontWeight: 600,
-  letterSpacing: 2
+  fontSize: '1.3rem',
+  letterSpacing: 2,
+  marginTop: theme.spacing(6)
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[500],
-  fontWeight: 300,
-  fontSize: '0.95rem',
+  fontWeight: 500,
+  fontSize: '1rem',
   width: '70%'
 }));
 
@@ -41,14 +45,15 @@ const Description = styled(Typography)(({ theme }) => ({
 export default function Serviceitem ({ service }) {
   return(
     <Tooltip title="Leer mas" placement="top" arrow>
-    <StackStyled onClick={service.action}>
-      <AvatarStyled>{service.icon}</AvatarStyled>
-      <Title>{service.title}</Title>
-      <Description>
-        Duis elementum ac lorem vitae tincidunt. Praesent velit magna, viverra et orci eu, sollicitudin aliquet sapien.
-        Cras sit amet rhoncus lectus. Ut eu euismod ex, vitae ultrices neque. 
-      </Description>
-    </StackStyled>
+      <StackStyled onClick={service.action}>
+        <ServiceImage 
+          component="img"
+          src={service.image}
+          alt={service.title}
+        />
+        <Title>{service.title}</Title>
+        <Description>{service.description}</Description>
+      </StackStyled>
     </Tooltip>
   );
 };
