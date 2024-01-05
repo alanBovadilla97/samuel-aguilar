@@ -40,7 +40,7 @@ export default function Footer() {
   ];
 
   const CONTACT = [
-    { text: 'Jorge Isaac 688, Guadalajara, Jalisco.', icon: <BusinessIcon />, action: handleOpenLocation },
+    // { text: 'Jorge Isaac 688, Guadalajara, Jalisco.', icon: <BusinessIcon />, action: handleOpenLocation },
     { text: 'contacto@blackstock.com.mx', icon: <ContactMailIcon /> },
     { text: '33-1280-2544', icon: <PhoneIcon /> }
   ];
