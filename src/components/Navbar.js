@@ -9,7 +9,8 @@ import { makeStyles } from "@mui/styles";
 // -------------------------------------------------------------------------
 
 const AppBarStyled = styled(AppBar)(({ theme }) => ({
-  background: theme.palette.common.white
+  background: theme.palette.common.white,
+  transform: 'translateY(0)'
 }));
 
 const ButtonStyled = styled((props) => {
@@ -23,7 +24,8 @@ const ButtonStyled = styled((props) => {
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    transform: 'transformY(0)'
   },
   logo: {
     width: 150, 
