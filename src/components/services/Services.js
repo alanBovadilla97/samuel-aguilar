@@ -1,9 +1,10 @@
 import { Box, Container, Typography, styled, Grid } from "@mui/material";
-// icons
-import AccountBalanceOutlinedIcon from '@mui/icons-material/AccountBalanceOutlined';
+
 import Serviceitem from "./ServiceItem";
+
 import { useNavigate } from "react-router-dom";
 import { PATH_SERVICES } from "src/routes/path";
+import { useTranslation } from "react-i18next";
 
 // -------------------------------------------------------------------------
 
@@ -43,6 +44,7 @@ const ServicesImage = styled(Container)(({ theme }) => ({
 
 export default function Services () {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleNavigate = (path) => {
     navigate(path);
@@ -71,15 +73,13 @@ export default function Services () {
       description: 'Nuestra consultoría financiera va más allá de los números. Colaboramos estrechamente contigo para comprender tus metas comerciales y desarrollar estrategias financieras personalizadas'
     }
   ];
-
+  console.log(t('Welcome'))
   return(
     <BoxStyled px={4} py={6}>
       <ContainerStyled maxWidth="xl">
-        <Title variant="h3">Servicios</Title>
+        <Title variant="h3">{t('Services Title')}</Title>
         <Subtitle>
-          Nuestros servicios contables están diseñados para brindar soluciones integrales a empresas de todos los tamaños. 
-          Nos comprometemos a ayudar a nuestros clientes a mantener una salud financiera sólida, garantizando el 
-          cumplimiento normativo y permitiendo que se enfoquen en el crecimiento y éxito de sus negocios.
+          {t('Services Description')}
         </Subtitle>
         <Grid container mt={5} spacing={5}>
           <Grid item xs={12}>
