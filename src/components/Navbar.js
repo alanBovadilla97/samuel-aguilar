@@ -5,6 +5,7 @@ import ServicesMenu from "./navbar/ServicesMenu";
 import { useNavigate } from "react-router-dom";
 import { PATH_PAGE } from "src/routes/path";
 import { makeStyles } from "@mui/styles";
+import LanguageSelector from "./navbar/LanguageSelector";
 
 // -------------------------------------------------------------------------
 
@@ -104,6 +105,7 @@ export default function Navbar() {
               <ButtonStyled onClick={handleClickContactMe}>
                 Contactame
               </ButtonStyled>
+              <LanguageSelector />
             </Box>
             <Box sx={{ display: { xs: 'block', sm: 'none' }}}>
               <IconButton onClick={handleSetMobileOpen}>
