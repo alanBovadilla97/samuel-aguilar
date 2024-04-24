@@ -73,7 +73,7 @@ export default function Services () {
       description: 'Nuestra consultoría financiera va más allá de los números. Colaboramos estrechamente contigo para comprender tus metas comerciales y desarrollar estrategias financieras personalizadas'
     }
   ];
-  console.log(t('Welcome'))
+
   return(
     <BoxStyled px={4} py={6}>
       <ContainerStyled maxWidth="xl">
