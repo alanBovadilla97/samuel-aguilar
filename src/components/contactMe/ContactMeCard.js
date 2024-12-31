@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
 
-import { Box, Grid, IconButton, Stack, Tooltip, useTheme } from "@mui/material";
+import { Box, Grid, IconButton, Tooltip, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
 
@@ -15,13 +15,14 @@ const useStyles = makeStyles((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     '& *': {
       fontFamily: 'none' 
     }
   },
   logo: {
-    width: '30%',
-    alignSelf: 'flex-end'
+    width: '50%',
   },
   infoContainer: {
     flex: 1,
@@ -90,13 +91,8 @@ export default function ContactMeCard() {
         >
           <Box className={classes.root}>
             <Box component="img" src='/static/logo-sec.png'  alt="logo" className={classes.logo} />
-            <Box className={classes.infoContainer}>
-              <Box component="img" src="/static/signature-2.png" alt="signature" className={classes.info} />
-            </Box>
           </Box>
-          {/* <p onClick={handleFlipCard}> */}
-            <Map />
-          {/* </p> */}
+          <Map />
         </ReactCardFlip>
       </Grid>
       <Grid item xs={12} md={1} className={classes.rotateButtonContainer}>
