@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { Box, styled, Typography } from "@mui/material";
 
 // -------------------------------------------------------------------------
@@ -17,10 +18,12 @@ const TypographyStyled = styled(Typography)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function Copyright() {
+  const currentYear = DateTime.now().year;
+
   return (
     <BoxStyled>
       <TypographyStyled>
-        ©2023. BLACKSTOCK
+        ©{currentYear}. BLACKSTOCK
       </TypographyStyled>
     </BoxStyled>
   );

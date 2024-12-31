@@ -23,6 +23,7 @@
     "google-map-react": "^2.2.1",
     "helmet": "^6.0.1",
     "i18next": "^23.11.2",
+    "luxon": "^3.5.0",
     "notistack": "^2.0.8",
     "react": "^18.2.0",
     "react-card-flip": "^1.1.5",
