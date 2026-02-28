@@ -2,6 +2,7 @@
   "name": "samuel-aguilar",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://blackstock.com.mx",
   "engines": {
     "node": "18.16.0"
   },
