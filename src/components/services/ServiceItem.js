@@ -1,4 +1,4 @@
-import { Avatar, Stack, Typography, styled, Tooltip, Box } from "@mui/material";
+import { Stack, Typography, styled, Tooltip, Box } from "@mui/material";
 
 // -------------------------------------------------------------------------
 

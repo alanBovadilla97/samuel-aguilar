@@ -3,7 +3,6 @@ import { Box, Container, Grid, styled } from "@mui/material";
 import Copyright from "./Copyright";
 import FooterList from "./FooterList";
 // icons
-import BusinessIcon from '@mui/icons-material/Business';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import SocialNetworks from "./SocialNetworks";
@@ -22,11 +21,6 @@ const BoxStyled = styled(Box)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function Footer() {
-
-  const handleOpenLocation = () => {
-    window.open('https://goo.gl/maps/vHV9DKbtZoyADdKr5', '_blank', 'noreferrer')
-  };
-
   const ABOUT = [
     { text: `Somos una empresa que ofrece servicios contables profesionales 
       y confiables a sus clientes. Con un equipo de contadores altamente capacitados y experimentados, 

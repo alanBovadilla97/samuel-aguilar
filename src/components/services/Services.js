@@ -30,16 +30,6 @@ const Subtitle = styled(Typography)(({ theme }) => ({
   width: '70%'
 }));
 
-const ServicesImage = styled(Container)(({ theme }) => ({
-  backgroundImage: 'url(/static/corp-meeting.jpeg)',
-  width: '100%',
-  height: '100%',
-  boxShadow: `0 0 15px 6px ${theme.palette.grey[800]} inset`,
-  backgroundSize: 'cover',
-  backgroundRepeat: 'no-repeat',
-  padding: 0
-}));
-
 // -------------------------------------------------------------------------
 
 export default function Services () {
