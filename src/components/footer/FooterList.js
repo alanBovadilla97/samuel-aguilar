@@ -5,8 +5,8 @@ import { Box, List, ListItem, ListItemIcon, ListItemText, ListSubheader, styled 
 const ListSubheaderStyled = styled(ListSubheader)(({ theme }) => ({
   backgroundColor: 'transparent',
   color: theme.palette.common.white,
-  fontWeight: 600,
-  fontSize: '1.1rem'
+  fontWeight: 500,
+  fontSize: '1.5rem'
 }));
 
 const ListItemTextStyled = styled(ListItemText)(({ theme, hasAction }) => ({
