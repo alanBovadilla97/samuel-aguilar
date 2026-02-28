@@ -15,8 +15,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const BoxStyled = styled(Box)(({ theme }) => ({
   background: theme.palette.grey[800],
-  paddingTop: theme.spacing(5),
-  paddingBottom: theme.spacing(5)
+  paddingTop: theme.spacing(10),
+  paddingBottom: theme.spacing(8),
 }));
 
 // -------------------------------------------------------------------------
