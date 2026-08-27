@@ -1,5 +1,6 @@
 import { Menu, MenuItem, styled } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { PATH_SERVICES } from "src/routes/path";
 
 // -------------------------------------------------------------------------
@@ -7,15 +8,25 @@ import { PATH_SERVICES } from "src/routes/path";
 const MenuItemStyled = styled(MenuItem)(({ theme }) => ({
   paddingRight: theme.spacing(10),
   paddingLeft: theme.spacing(2)
-}))
+}));
+
+const SERVICES_MENU_ITEMS = [
+  { labelKey: 'navbar.servicesMenu.index', path: PATH_SERVICES.index },
+  { labelKey: 'services.items.accounting.title', path: PATH_SERVICES.accounting },
+  { labelKey: 'services.items.auditing.title' },
+];
 
 // -------------------------------------------------------------------------
 
 export default function ServicesMenu({ open, anchorEl, setAnchorEl, handleClose, setMobileOpen }) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleNavigate = (path) => {
-    navigate(path);
+    if (path) {
+      navigate(path);
+    }
+
     setAnchorEl(null);
     setMobileOpen();
   };
@@ -27,9 +38,11 @@ export default function ServicesMenu({ open, anchorEl, setAnchorEl, handleClose,
       onClose={handleClose}
       MenuListProps={{ onMouseLeave: handleClose }}
     >
-      <MenuItemStyled onClick={() => handleNavigate(PATH_SERVICES.index)}>Indice</MenuItemStyled>
-      <MenuItemStyled onClick={() => handleNavigate(PATH_SERVICES.accounting)}>Contabilidad</MenuItemStyled>
-      <MenuItemStyled>Auditorias</MenuItemStyled>
+      {SERVICES_MENU_ITEMS.map(({ labelKey, path }) => (
+        <MenuItemStyled key={labelKey} onClick={() => handleNavigate(path)}>
+          {t(labelKey)}
+        </MenuItemStyled>
+      ))}
     </Menu>
   );
 };

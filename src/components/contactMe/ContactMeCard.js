@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReactCardFlip from "react-card-flip";
+import { useTranslation } from "react-i18next";
 
 import { Box, Grid, IconButton, Tooltip, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -59,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ContactMeCard() {
   const [isFlipped, setIsFlipped] = useState(false);
+  const { t } = useTranslation();
   const classes = useStyles();
   const theme = useTheme();
   const cardClasses = {
@@ -96,7 +98,7 @@ export default function ContactMeCard() {
         </ReactCardFlip>
       </Grid>
       <Grid item xs={12} md={1} className={classes.rotateButtonContainer}>
-        <Tooltip title="Rotar" arrow placement="top">
+        <Tooltip title={t('contact.card.rotate')} arrow placement="top">
           <IconButton  className={classes.rotateButton} onClick={handleFlipCard}>
             <ThreeSixtyIcon />
           </IconButton>

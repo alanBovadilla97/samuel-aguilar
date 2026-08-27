@@ -1,6 +1,7 @@
 import { Box, Button, styled } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { PATH_SERVICES } from 'src/routes/path';
+import { useTranslation } from 'react-i18next';
 
 // -------------------------------------------------------------------------
 
@@ -47,6 +48,7 @@ const ButtonServices = styled(Button)(({ theme }) => ({
 
 export default function IntroImage() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleOpenServices = () => {
     navigate(PATH_SERVICES.index);
@@ -57,7 +59,7 @@ export default function IntroImage() {
       <Title>
         <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-white.png'} alt="BLACKSTOCK" sx={{ width: 400 }} />
         <ButtonServices variant="outlined" color="inherit" onClick={handleOpenServices}>
-          Servicios
+          {t('services.title')}
         </ButtonServices>
       </Title>
       <BoxStyled

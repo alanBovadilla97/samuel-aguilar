@@ -1,6 +1,7 @@
 import { AppBar, Box, Button, Container, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, styled, Toolbar } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ServicesMenu from "./navbar/ServicesMenu";
 import { useNavigate } from "react-router-dom";
 import { PATH_PAGE } from "src/routes/path";
@@ -50,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Navbar() {
   const classes = useStyles();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -93,7 +95,7 @@ export default function Navbar() {
             />
             <Box className={classes.optionsContainer} sx={{ display: { xs: 'none', sm: 'flex' }}}>
               <ButtonStyled onClick={handleOpenServices}>
-                Servicios
+                {t('navbar.services')}
               </ButtonStyled>
               <ServicesMenu 
                 open={open} 
@@ -103,7 +105,7 @@ export default function Navbar() {
                 setMobileOpen={setMobileOpen}
               />
               <ButtonStyled onClick={handleClickContactMe}>
-                Contactame
+                {t('navbar.contactUs')}
               </ButtonStyled>
               <LanguageSelector />
             </Box>
@@ -125,13 +127,18 @@ export default function Navbar() {
         <List>
           <ListItem disablePadding>
             <ListItemButton onClick={handleOpenServices}>
-              <ListItemText primary="Servicios" />
+              <ListItemText primary={t('navbar.services')} />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton onClick={handleClickContactMe}>
-              <ListItemText primary="Contactame" />
+              <ListItemText primary={t('navbar.contactUs')} />
             </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <Box sx={{ px: 2, py: 1 }}>
+              <LanguageSelector />
+            </Box>
           </ListItem>
         </List>
       </Drawer>

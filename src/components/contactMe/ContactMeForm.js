@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 import { Grid, styled, TextField, Typography, Paper } from "@mui/material";
 import { LoadingButton } from '@mui/lab';
+import { useTranslation } from "react-i18next";
 
 import * as Yup from 'yup';
 import { Form, FormikProvider, useFormik } from "formik";
@@ -33,8 +34,34 @@ const ButtonSend = styled(LoadingButton)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function ContactMeForm() {
+  const { t, i18n } = useTranslation();
   const { enqueueSnackbar } = useSnackbar();
   const [state, handleSubmit] = useForm("xrgvkjwg");
+
+  const validate = useCallback((values) => {
+    const errors = {};
+
+    if (!values.name) {
+      errors.name = t('contact.form.validation.nameRequired');
+    }
+
+    if (!values.lastName) {
+      errors.lastName = t('contact.form.validation.lastNameRequired');
+    }
+
+    if (!values.email) {
+      errors.email = t('contact.form.validation.emailRequired');
+    } else if (!Yup.string().email().isValidSync(values.email)) {
+      errors.email = t('contact.form.validation.emailInvalid');
+    }
+
+    if (!values.message) {
+      errors.message = t('contact.form.validation.messageRequired');
+    }
+
+    return errors;
+  }, [t]);
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -42,24 +69,23 @@ export default function ContactMeForm() {
       email: '',
       message: ''
     },
-    validationSchema: Yup.object().shape({
-      name: Yup.string().required('Nombre es requerido'),
-      lastName: Yup.string().required('Apellido es requerido'),
-      email: Yup.string().email('Una direccion de correo valida es requerida').required('Correo es requerido'),
-      message: Yup.string().required('Mensaje es requerido')
-    }),
+    validate,
     validateOnMount: true
   });
 
   const { values, errors, isSubmitting, isValid, submitCount, getFieldProps, resetForm, validateForm } = formik;
 
   useEffect(() => {
+    validateForm();
+  }, [i18n.language, validateForm]);
+
+  useEffect(() => {
     if (state.succeeded) {
       resetForm();
-      validateForm(values);
-      enqueueSnackbar('Gracias por ponerse en contacto \n Nos pondremos en contacto con usted a la brevedad');
+      validateForm();
+      enqueueSnackbar(t('contact.form.successMessage'));
     }
-  }, [enqueueSnackbar, resetForm, state.succeeded, validateForm]); // eslint-disable-line
+  }, [enqueueSnackbar, resetForm, state.succeeded, t, validateForm]);
 
   return(
     <PaperStyled elevation={10}>
@@ -67,11 +93,11 @@ export default function ContactMeForm() {
         <Form onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <Title>Informacion personal</Title>
+              <Title>{t('contact.form.personalInfo')}</Title>
             </Grid>
             <Grid item xs={12} md={6}>
               <TextField 
-                label="Nombre" 
+                label={t('contact.form.fields.name')} 
                 size="small"
                 fullWidth
                 {...getFieldProps('name')}
@@ -81,7 +107,7 @@ export default function ContactMeForm() {
             </Grid>
             <Grid item xs={12} md={6}>
               <TextField 
-                label="Apellido" 
+                label={t('contact.form.fields.lastName')} 
                 size="small"
                 fullWidth
                 {...getFieldProps('lastName')}
@@ -91,7 +117,7 @@ export default function ContactMeForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField 
-                label="Correo" 
+                label={t('contact.form.fields.email')} 
                 size="small"
                 fullWidth
                 {...getFieldProps('email')}
@@ -101,7 +127,7 @@ export default function ContactMeForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField 
-                label="Mensaje" 
+                label={t('contact.form.fields.message')} 
                 size="small"
                 fullWidth
                 multiline
@@ -113,7 +139,7 @@ export default function ContactMeForm() {
             </Grid>
             <Grid item sx={{ width: '100%', textAlign: 'center' }}>
               <ButtonSend variant="contained" type="submit" loading={isSubmitting} disabled={!isValid}>
-                Enviar
+                {t('contact.form.submit')}
               </ButtonSend>
             </Grid>
           </Grid>

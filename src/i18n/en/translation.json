@@ -1,4 +1,66 @@
 {
-  "Services Title": "Services",
-  "Services Description": "Our accounting services are designed to provide comprehensive solutions to businesses of all sizes. We are committed to helping our clients maintain strong financial health, ensuring regulatory compliance, and enabling them to focus on the growth and success of their businesses."
+  "common": {
+    "readMore": "Read more"
+  },
+  "services": {
+    "title": "Services",
+    "description": "Our accounting services are designed to provide comprehensive solutions to businesses of all sizes. We are committed to helping our clients maintain strong financial health, ensuring regulatory compliance, and enabling them to focus on the growth and success of their businesses.",
+    "items": {
+      "accounting": {
+        "title": "Accounting",
+        "description": "We provide accurate, efficient accounting services to safeguard your company's financial integrity."
+      },
+      "auditing": {
+        "title": "Auditing",
+        "description": "Our audit services deliver a thorough, objective review of your financial statements with meticulous, professional care."
+      },
+      "taxes": {
+        "title": "Taxes",
+        "description": "We simplify tax compliance for your business—from preparing returns to strategic tax planning."
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Our financial consulting goes beyond the numbers. We work closely with you to understand your business goals and develop tailored financial strategies."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "card": {
+      "rotate": "Flip"
+    },
+    "form": {
+      "personalInfo": "Personal Information",
+      "fields": {
+        "name": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "submit": "Send",
+      "validation": {
+        "nameRequired": "First name is required",
+        "lastNameRequired": "Last name is required",
+        "emailInvalid": "Please enter a valid email address",
+        "emailRequired": "Email is required",
+        "messageRequired": "Message is required"
+      },
+      "successMessage": "Thank you for reaching out. We will get back to you shortly."
+    }
+  },
+  "footer": {
+    "about": "We are a company that provides professional, reliable accounting services to our clients. With a team of highly skilled and experienced accountants, Blackstock is dedicated to delivering comprehensive accounting solutions tailored to each client's individual needs.",
+    "sections": {
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "followUs": "Follow Us"
+  },
+  "navbar": {
+    "services": "Services",
+    "contactUs": "Contact Us",
+    "servicesMenu": {
+      "index": "Index"
+    }
+  }
 }

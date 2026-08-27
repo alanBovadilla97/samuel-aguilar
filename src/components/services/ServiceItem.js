@@ -1,4 +1,5 @@
 import { Stack, Typography, styled, Tooltip, Box } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 // -------------------------------------------------------------------------
 
@@ -43,8 +44,10 @@ const Description = styled(Typography)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function Serviceitem ({ service }) {
+  const { t } = useTranslation();
+
   return(
-    <Tooltip title="Leer mas" placement="top" arrow>
+    <Tooltip title={t('common.readMore')} placement="top" arrow>
       <StackStyled onClick={service.action}>
         <ServiceImage 
           component="img"

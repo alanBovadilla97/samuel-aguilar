@@ -1,0 +1,66 @@
+{
+  "common": {
+    "readMore": "Ler mais"
+  },
+  "services": {
+    "title": "Serviços",
+    "description": "Os nossos serviços de contabilidade foram concebidos para oferecer soluções abrangentes a empresas de todos os tamanhos. Comprometemo-nos a ajudar os nossos clientes a manter uma saúde financeira sólida, garantindo o cumprimento normativo e permitindo que se concentrem no crescimento e no sucesso dos seus negócios.",
+    "items": {
+      "accounting": {
+        "title": "Contabilidade",
+        "description": "Oferecemos serviços de contabilidade precisos e eficientes para garantir a integridade financeira da sua empresa."
+      },
+      "auditing": {
+        "title": "Auditorias",
+        "description": "Os nossos serviços de auditoria foram concebidos para lhe proporcionar uma avaliação exaustiva e objetiva das suas demonstrações financeiras, com um enfoque detalhado e profissional."
+      },
+      "taxes": {
+        "title": "Impostos",
+        "description": "Simplificamos a complexidade do cumprimento fiscal para a sua empresa, desde a preparação de declarações até ao planeamento estratégico."
+      },
+      "consulting": {
+        "title": "Consultoria",
+        "description": "A nossa consultoria financeira vai além dos números. Colaboramos estreitamente consigo para compreender os seus objetivos empresariais e desenvolver estratégias financeiras personalizadas."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacte-nos",
+    "card": {
+      "rotate": "Rodar"
+    },
+    "form": {
+      "personalInfo": "Informação pessoal",
+      "fields": {
+        "name": "Nome",
+        "lastName": "Apelido",
+        "email": "E-mail",
+        "message": "Mensagem"
+      },
+      "submit": "Enviar",
+      "validation": {
+        "nameRequired": "O nome é obrigatório",
+        "lastNameRequired": "O apelido é obrigatório",
+        "emailInvalid": "Introduza um endereço de e-mail válido",
+        "emailRequired": "O e-mail é obrigatório",
+        "messageRequired": "A mensagem é obrigatória"
+      },
+      "successMessage": "Obrigado pelo seu contacto. Entraremos em contacto consigo em breve."
+    }
+  },
+  "footer": {
+    "about": "Somos uma empresa que oferece serviços de contabilidade profissionais e fiáveis aos seus clientes. Com uma equipa de contabilistas altamente qualificados e experientes, a Blackstock dedica-se a fornecer soluções contabilísticas integrais adaptadas às necessidades individuais de cada cliente.",
+    "sections": {
+      "services": "Serviços",
+      "contact": "Contacto"
+    },
+    "followUs": "Siga-nos"
+  },
+  "navbar": {
+    "services": "Serviços",
+    "contactUs": "Contacte-nos",
+    "servicesMenu": {
+      "index": "Índice"
+    }
+  }
+}

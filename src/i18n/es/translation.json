@@ -1,4 +1,66 @@
 {
-  "Services Title": "Servicios",
-  "Services Description": "Nuestros servicios contables están diseñados para brindar soluciones integrales a empresas de todos los tamaños. Nos comprometemos a ayudar a nuestros clientes a mantener una salud financiera sólida, garantizando el cumplimiento normativo y permitiendo que se enfoquen en el crecimiento y éxito de sus negocios."
+  "common": {
+    "readMore": "Leer más"
+  },
+  "services": {
+    "title": "Servicios",
+    "description": "Nuestros servicios contables están diseñados para brindar soluciones integrales a empresas de todos los tamaños. Nos comprometemos a ayudar a nuestros clientes a mantener una salud financiera sólida, garantizando el cumplimiento normativo y permitiendo que se enfoquen en el crecimiento y éxito de sus negocios.",
+    "items": {
+      "accounting": {
+        "title": "Contabilidad",
+        "description": "Ofrecemos servicios contables precisos y eficientes para garantizar la integridad financiera de tu empresa."
+      },
+      "auditing": {
+        "title": "Auditorías",
+        "description": "Nuestros servicios de auditoría están diseñados para brindarte una evaluación exhaustiva y objetiva de tus estados financieros, con un enfoque detallado y profesional."
+      },
+      "taxes": {
+        "title": "Impuestos",
+        "description": "Simplificamos la complejidad del cumplimiento tributario para tu empresa, desde la preparación de declaraciones fiscales hasta la planificación estratégica."
+      },
+      "consulting": {
+        "title": "Consultoría",
+        "description": "Nuestra consultoría financiera va más allá de los números. Colaboramos estrechamente contigo para comprender tus metas comerciales y desarrollar estrategias financieras personalizadas."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "card": {
+      "rotate": "Rotar"
+    },
+    "form": {
+      "personalInfo": "Información personal",
+      "fields": {
+        "name": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo",
+        "message": "Mensaje"
+      },
+      "submit": "Enviar",
+      "validation": {
+        "nameRequired": "El nombre es obligatorio",
+        "lastNameRequired": "El apellido es obligatorio",
+        "emailInvalid": "Introduce una dirección de correo válida",
+        "emailRequired": "El correo es obligatorio",
+        "messageRequired": "El mensaje es obligatorio"
+      },
+      "successMessage": "Gracias por contactarnos. Nos pondremos en contacto contigo pronto."
+    }
+  },
+  "footer": {
+    "about": "Somos una empresa que ofrece servicios contables profesionales y confiables a sus clientes. Con un equipo de contadores altamente capacitados y experimentados, Blackstock se dedica a brindar soluciones integrales de contabilidad adaptadas a las necesidades individuales de cada cliente.",
+    "sections": {
+      "services": "Servicios",
+      "contact": "Contacto"
+    },
+    "followUs": "Síganos"
+  },
+  "navbar": {
+    "services": "Servicios",
+    "contactUs": "Contáctanos",
+    "servicesMenu": {
+      "index": "Índice"
+    }
+  }
 }

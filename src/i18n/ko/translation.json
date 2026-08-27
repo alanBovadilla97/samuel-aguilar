@@ -1,0 +1,66 @@
+{
+  "common": {
+    "readMore": "자세히 보기"
+  },
+  "services": {
+    "title": "서비스",
+    "description": "당사의 회계 서비스는 모든 규모의 기업에 포괄적인 솔루션을 제공하도록 설계되었습니다. 고객이 견고한 재무 건전성을 유지하고 규정 준수를 보장하며 비즈니스의 성장과 성공에 집중할 수 있도록 돕는 데 전념하고 있습니다.",
+    "items": {
+      "accounting": {
+        "title": "회계",
+        "description": "정확하고 효율적인 회계 서비스로 귀사의 재무 건전성을 보장합니다."
+      },
+      "auditing": {
+        "title": "감사",
+        "description": "감사 서비스는 세심하고 전문적인 접근 방식으로 재무제표에 대한 철저하고 객관적인 평가를 제공합니다."
+      },
+      "taxes": {
+        "title": "세무",
+        "description": "세금 신고 준비부터 전략적 세무 계획까지, 기업의 세무 준수 복잡성을 단순화합니다."
+      },
+      "consulting": {
+        "title": "컨설팅",
+        "description": "재무 컨설팅은 숫자 그 이상입니다. 귀사의 비즈니스 목표를 깊이 이해하고 맞춤형 재무 전략을 함께 수립합니다."
+      }
+    }
+  },
+  "contact": {
+    "title": "문의하기",
+    "card": {
+      "rotate": "회전"
+    },
+    "form": {
+      "personalInfo": "개인 정보",
+      "fields": {
+        "name": "이름",
+        "lastName": "성",
+        "email": "이메일",
+        "message": "메시지"
+      },
+      "submit": "보내기",
+      "validation": {
+        "nameRequired": "이름을 입력해 주세요",
+        "lastNameRequired": "성을 입력해 주세요",
+        "emailInvalid": "유효한 이메일 주소를 입력해 주세요",
+        "emailRequired": "이메일을 입력해 주세요",
+        "messageRequired": "메시지를 입력해 주세요"
+      },
+      "successMessage": "문의해 주셔서 감사합니다. 곧 연락드리겠습니다."
+    }
+  },
+  "footer": {
+    "about": "저희는 고객에게 전문적이고 신뢰할 수 있는 회계 서비스를 제공하는 기업입니다. 숙련되고 경험이 풍부한 회계사 팀과 함께 Blackstock은 각 고객의 개별적인 필요에 맞춘 포괄적인 회계 솔루션을 제공합니다.",
+    "sections": {
+      "services": "서비스",
+      "contact": "연락처"
+    },
+    "followUs": "팔로우하기"
+  },
+  "navbar": {
+    "services": "서비스",
+    "contactUs": "문의하기",
+    "servicesMenu": {
+      "index": "목록"
+    }
+  }
+}

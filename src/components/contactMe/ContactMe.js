@@ -1,4 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 import ContactMeCard from "./ContactMeCard";
 import ContactMeForm from "./ContactMeForm";
@@ -23,10 +24,14 @@ const Title = styled(Typography)(({ theme }) => ({
 // -------------------------------------------------------------------------
 
 export default function ContactMe() {
+  const { t } = useTranslation();
+
   return(
     <BoxStyled px={4} py={6} id="contact-me">
       <ContainerStyled maxWidth="xl">
-        <Title variant="h3">Contactame</Title>
+        <Title variant="h3">
+          {t('contact.title')}
+        </Title>
         <Grid container spacing={5} sx={{ justifyContent: 'center' }}>
           <Grid item xs={12} md={6}>
             <ContactMeCard />

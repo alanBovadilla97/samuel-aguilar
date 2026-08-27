@@ -32,6 +32,28 @@ const Subtitle = styled(Typography)(({ theme }) => ({
 
 // -------------------------------------------------------------------------
 
+const SERVICE_ITEM_CONFIG = [
+  {
+    id: 'accounting',
+    image: '/static/contabilidad.jpg.webp',
+    path: PATH_SERVICES.accounting,
+  },
+  {
+    id: 'auditing',
+    image: '/static/auditorias.webp',
+  },
+  {
+    id: 'taxes',
+    image: '/static/impuestos.jpeg',
+  },
+  {
+    id: 'consulting',
+    image: '/static/consultoria.jpeg',
+  },
+];
+
+// -------------------------------------------------------------------------
+
 export default function Services () {
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -40,42 +62,26 @@ export default function Services () {
     navigate(path);
   };
 
-  const SERVICES = [
-    {
-      title: 'Contabilidad', 
-      image: '/static/contabilidad.jpg.webp',
-      description: 'Ofrecemos servicios contables precisos y eficientes para garantizar la integridad financiera de tu empresa',
-      action: () => handleNavigate(PATH_SERVICES.accounting)
-    },
-    {
-      title: 'Auditorias', 
-      image: '/static/auditorias.webp',
-      description: 'Nuestros servicios de auditoría están diseñados para brindarte una evaluación exhaustiva y objetiva de tus estados financieros con un enfoque detallado y profesional'
-    },
-    {
-      title: 'Impuestos', 
-      image: 'static/impuestos.jpeg',
-      description: 'Simplificamos la complejidad del cumplimiento tributario para tu empresa. Desde la preparación de declaraciones fiscales hasta la planificación estratégica'
-    },
-    {
-      title: 'Consultoria', 
-      image: 'static/consultoria.jpeg',
-      description: 'Nuestra consultoría financiera va más allá de los números. Colaboramos estrechamente contigo para comprender tus metas comerciales y desarrollar estrategias financieras personalizadas'
-    }
-  ];
+  const services = SERVICE_ITEM_CONFIG.map(({ id, image, path }) => ({
+    id,
+    image,
+    title: t(`services.items.${id}.title`),
+    description: t(`services.items.${id}.description`),
+    ...(path && { action: () => handleNavigate(path) }),
+  }));
 
   return(
     <BoxStyled px={4} py={6}>
       <ContainerStyled maxWidth="xl">
-        <Title variant="h3">{t('Services Title')}</Title>
+        <Title variant="h3">{t('services.title')}</Title>
         <Subtitle>
-          {t('Services Description')}
+          {t('services.description')}
         </Subtitle>
         <Grid container mt={5} spacing={5}>
           <Grid item xs={12}>
             <Grid container spacing={2}>
-              {SERVICES.map(service => (
-                <Grid item xs={12} md={6} lg={3}>
+              {services.map((service) => (
+                <Grid item xs={12} md={6} lg={3} key={service.id}>
                   <Serviceitem service={service} />
                 </Grid>
               ))}

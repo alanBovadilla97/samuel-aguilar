@@ -1,0 +1,66 @@
+{
+  "common": {
+    "readMore": "En savoir plus"
+  },
+  "services": {
+    "title": "Services",
+    "description": "Nos services comptables sont conçus pour offrir des solutions complètes aux entreprises de toutes tailles. Nous nous engageons à aider nos clients à maintenir une santé financière solide, à garantir la conformité réglementaire et à leur permettre de se concentrer sur la croissance et le succès de leurs activités.",
+    "items": {
+      "accounting": {
+        "title": "Comptabilité",
+        "description": "Nous proposons des services comptables rigoureux et efficaces pour garantir l'intégrité financière de votre entreprise."
+      },
+      "auditing": {
+        "title": "Audit",
+        "description": "Nos services d'audit sont conçus pour vous offrir une évaluation exhaustive et objective de vos états financiers, avec une approche rigoureuse et professionnelle."
+      },
+      "taxes": {
+        "title": "Fiscalité",
+        "description": "Nous simplifions la complexité de la conformité fiscale pour votre entreprise, de la préparation des déclarations à la planification stratégique."
+      },
+      "consulting": {
+        "title": "Conseil",
+        "description": "Notre conseil financier va au-delà des chiffres. Nous travaillons en étroite collaboration avec vous pour comprendre vos objectifs commerciaux et élaborer des stratégies financières sur mesure."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "card": {
+      "rotate": "Retourner"
+    },
+    "form": {
+      "personalInfo": "Informations personnelles",
+      "fields": {
+        "name": "Prénom",
+        "lastName": "Nom",
+        "email": "E-mail",
+        "message": "Message"
+      },
+      "submit": "Envoyer",
+      "validation": {
+        "nameRequired": "Le prénom est obligatoire",
+        "lastNameRequired": "Le nom est obligatoire",
+        "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+        "emailRequired": "L'e-mail est obligatoire",
+        "messageRequired": "Le message est obligatoire"
+      },
+      "successMessage": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais."
+    }
+  },
+  "footer": {
+    "about": "Nous sommes une entreprise qui propose des services comptables professionnels et fiables à ses clients. Forte d'une équipe de comptables hautement qualifiés et expérimentés, Blackstock s'engage à fournir des solutions comptables complètes adaptées aux besoins spécifiques de chaque client.",
+    "sections": {
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "followUs": "Suivez-nous"
+  },
+  "navbar": {
+    "services": "Services",
+    "contactUs": "Contactez-nous",
+    "servicesMenu": {
+      "index": "Index"
+    }
+  }
+}
