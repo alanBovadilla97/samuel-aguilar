@@ -29,7 +29,7 @@ const Subtitle = styled(Typography)(({ theme }) => ({
   fontWeight: 300,
   maxWidth: '70%',
   [theme.breakpoints.down('sm')]: {
-    textAlign: 'center',
+    textAlign: 'left',
     alignSelf: 'center',
     maxWidth: '100%',
   },
