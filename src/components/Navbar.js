@@ -16,10 +16,18 @@ const AppBarStyled = styled(AppBar)(({ theme }) => ({
 }));
 
 const ButtonStyled = styled((props) => {
-  return <Button size="large" {...props} />
+  return <Button size="large" disableRipple {...props} />
 })(({ theme }) => ({
   color: theme.palette.common.black,
-  fontWeight: 600
+  fontWeight: 600,
+  textTransform: 'none',
+  backgroundColor: 'transparent',
+  '&:hover': {
+    backgroundColor: 'transparent',
+    textDecoration: 'underline',
+    textDecorationThickness: '2px',
+    textUnderlineOffset: '6px',
+  },
 }));
 
 // -------------------------------------------------------------------------
@@ -36,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   optionsContainer: {
-    gap: 1
+    gap: 4
   },
   drawer: {
     '& .MuiDrawer-paper': { 

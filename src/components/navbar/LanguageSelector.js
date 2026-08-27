@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import Select from 'react-select';
 
 import { makeStyles } from '@mui/styles';
+import { useTheme } from '@mui/material/styles';
 import 'flag-icon-css/css/flag-icon.min.css';
 
 const languageOptions = [
@@ -24,11 +25,14 @@ const useStyles = makeStyles((theme) => ({
   optionLabel: {
     color: theme.palette.common.black,
     marginLeft: 8,
+    fontWeight: 600,
+    fontSize: theme.typography.pxToRem(15),
   },
 }));
 
 export default function LanguageSelector() {
   const classes = useStyles();
+  const theme = useTheme();
   const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(
     () => languageOptions.find((option) => option.value === i18n.language) || languageOptions[0]
@@ -70,10 +74,28 @@ export default function LanguageSelector() {
           ...provided,
           border: 'none',
           minWidth: 140,
+          cursor: 'pointer',
+          fontSize: theme.typography.pxToRem(15),
+          boxShadow: 'none',
+        }),
+        singleValue: (provided) => ({
+          ...provided,
+          fontWeight: 600,
+          color: '#000',
+          fontSize: theme.typography.pxToRem(15),
         }),
         valueContainer: (provided) => ({
           ...provided,
           flexWrap: 'nowrap',
+          cursor: 'pointer',
+        }),
+        dropdownIndicator: (provided) => ({
+          ...provided,
+          cursor: 'pointer',
+        }),
+        option: (provided) => ({
+          ...provided,
+          cursor: 'pointer',
         }),
         menuPortal: (provided) => ({
           ...provided,
