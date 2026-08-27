@@ -12,6 +12,9 @@ const Container = styled(Box)(() => ({
   alignItems: 'center',
   width: '100%',
   height: 'calc(100vh - 64px)',
+  '@supports (height: 100dvh)': {
+    height: 'calc(100dvh - 64px)',
+  },
   overflow: 'hidden',
 }));
 
