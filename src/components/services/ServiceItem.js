@@ -4,12 +4,11 @@ import { useTranslation } from "react-i18next";
 // -------------------------------------------------------------------------
 
 const StackStyled = styled(Stack)(({ theme }) => ({
-  alignItems: 'center',
+  alignItems: 'flex-start',
   gap: theme.spacing(0.5),
   border: '1px solid transparent',
   transition: 'transform 200ms',
-  paddingTop: theme.spacing(1),
-  paddingBottom: theme.spacing(1),
+  padding: theme.spacing(2),
   height: '100%',
   '&:hover': {
     transform: 'scale(1)',
@@ -20,8 +19,8 @@ const StackStyled = styled(Stack)(({ theme }) => ({
 }));
 
 const ServiceImage = styled(Box)(({ theme }) => ({
- borderRadius: '50%',
- width: 250,
+ borderRadius: '5px',
+ width: '100%',
  height: 250,
  objectFit: 'cover'
 }));
@@ -38,7 +37,6 @@ const Description = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[500],
   fontWeight: 500,
   fontSize: '1rem',
-  width: '70%'
 }));
 
 // -------------------------------------------------------------------------

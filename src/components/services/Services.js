@@ -12,11 +12,11 @@ const BoxStyled = styled(Box)(({ theme }) => ({
   background: theme.palette.grey[800],
 }));
 
-const ContainerStyled = styled(Container)(({ theme }) => ({
-  textAlign: 'center',
+const ContainerStyled = styled(Container)(() => ({
+  textAlign: 'left',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center'
+  alignItems: 'flex-start',
 }));
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -27,7 +27,12 @@ const Title = styled(Typography)(({ theme }) => ({
 const Subtitle = styled(Typography)(({ theme }) => ({
   color: theme.palette.common.white,
   fontWeight: 300,
-  width: '70%'
+  maxWidth: '70%',
+  [theme.breakpoints.down('sm')]: {
+    textAlign: 'center',
+    alignSelf: 'center',
+    maxWidth: '100%',
+  },
 }));
 
 // -------------------------------------------------------------------------
@@ -77,16 +82,12 @@ export default function Services () {
         <Subtitle>
           {t('services.description')}
         </Subtitle>
-        <Grid container mt={5} spacing={5}>
-          <Grid item xs={12}>
-            <Grid container spacing={2}>
-              {services.map((service) => (
-                <Grid item xs={12} md={6} lg={3} key={service.id}>
-                  <Serviceitem service={service} />
-                </Grid>
-              ))}
+        <Grid container spacing={2} mt={0}>
+          {services.map((service) => (
+            <Grid item xs={12} md={6} lg={3} key={service.id}>
+              <Serviceitem service={service} />
             </Grid>
-          </Grid>
+          ))}
         </Grid>
       </ContainerStyled>
     </BoxStyled>
