@@ -5,15 +5,21 @@ import { useTranslation } from 'react-i18next';
 
 // -------------------------------------------------------------------------
 
-const Container = styled(Box)(() => ({
+const Container = styled(Box)(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   width: '100%',
-  height: 'calc(100vh - 64px)',
+  height: `calc(100vh - ${theme.mixins.toolbar.minHeight}px)`,
   '@supports (height: 100dvh)': {
-    height: 'calc(100dvh - 64px)',
+    height: `calc(100dvh - ${theme.mixins.toolbar.minHeight}px)`,
+  },
+  [theme.breakpoints.up('sm')]: {
+    height: 'calc(100vh - 64px)',
+    '@supports (height: 100dvh)': {
+      height: 'calc(100dvh - 64px)',
+    },
   },
   overflow: 'hidden',
 }));
@@ -37,9 +43,12 @@ const Title = styled(Box)(({ theme }) => ({
 }));
 
 const BoxStyled = styled(Box)(() => ({
+  position: 'absolute',
+  inset: 0,
   width: '100%',
   height: '100%',
   objectFit: 'cover',
+  display: 'block',
 }));
 
 const ButtonServices = styled(Button)(({ theme }) => ({
