@@ -6,9 +6,13 @@ import { useTranslation } from 'react-i18next';
 // -------------------------------------------------------------------------
 
 const Container = styled(Box)(() => ({
+  position: 'relative',
   display: 'flex',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  width: '100%',
+  height: 'calc(100vh - 64px)',
+  overflow: 'hidden',
 }));
 
 const Title = styled(Box)(({ theme }) => ({
@@ -23,11 +27,16 @@ const Title = styled(Box)(({ theme }) => ({
   color: theme.palette.common.white,
   fontWeight: 'bold',
   borderRadius: 3,
-  padding: theme.spacing(4)
+  padding: theme.spacing(4),
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(2),
+  },
 }));
 
 const BoxStyled = styled(Box)(() => ({
-  width: '100%'
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
 }));
 
 const ButtonServices = styled(Button)(({ theme }) => ({
@@ -57,7 +66,7 @@ export default function IntroImage() {
   return(
     <Container>
       <Title>
-        <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-white.png'} alt="BLACKSTOCK" sx={{ width: 400 }} />
+        <Box component="img" src={process.env.PUBLIC_URL + '/static/logo-white.png'} alt="BLACKSTOCK" sx={{ width: { xs: 280, sm: 400 } }} />
         <ButtonServices variant="outlined" color="inherit" onClick={handleOpenServices}>
           {t('services.title')}
         </ButtonServices>
